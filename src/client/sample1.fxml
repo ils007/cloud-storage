@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="FieldLogin" promptText="login" />
+            <TextField fx:id="FieldPass" promptText="password" />
+            <Button fx:id="ButtonAuth" mnemonicParsing="false" onAction="#auth" text="Auth">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" blendMode="DARKEN" prefHeight="33.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="ButtonSendDownloadFile" maxWidth="Infinity" mnemonicParsing="false" onAction="#sendOrDownload" text="Send File" HBox.hgrow="ALWAYS" prefWidth="200">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="ButtonRename" maxWidth="Infinity" mnemonicParsing="false" onAction="#renameFile" text="Rename" HBox.hgrow="ALWAYS" prefWidth="200">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="ButtonDelete" maxWidth="Infinity" mnemonicParsing="false" onAction="#delete" text="Delete" HBox.hgrow="ALWAYS" prefWidth="200">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="ClientTable" editable="false" onMouseClicked="#ClientAreaSelection" scaleShape="true" HBox.hgrow="ALWAYS" >
+
+            </TableView>
+            <TableView fx:id="ServerTable" editable="false" onMouseClicked="#ServerAreaSelection" scaleShape="true" HBox.hgrow="ALWAYS"/>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="4.1.25">
+    <CLASSES>
+      <root url="file://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.25.Final" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.25.Final" recursive="false" />
+  </library>
+</component>
